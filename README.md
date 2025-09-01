@@ -1,30 +1,46 @@
-# Daily plan tool
+## 每日计划管理工具，请根据以下要求生成代码和架构设计：
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+🔑 功能需求
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/iqiang/v0-daily-plan-tool)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/SMLj1ZZYJLe)
+- 用户登录认证
 
-## Overview
+- 使用 Supabase Auth（支持邮箱/密码登录即可）。
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+- 首页（日历视图）
 
-## Deployment
+- 显示本月日历。
 
-Your project is live at:
+- 使用 shadcnUI + TailwindCSS 构建现代化 UI。
 
-**[https://vercel.com/iqiang/v0-daily-plan-tool](https://vercel.com/iqiang/v0-daily-plan-tool)**
+- 每个日期显示当天是否有待办事项（例如小圆点标记）。
 
-## Build your app
+- 日期详情页
 
-Continue building your app on:
+- 点击某个日期后，进入该日期的待办事项页面。
 
-**[https://v0.app/chat/projects/SMLj1ZZYJLe](https://v0.app/chat/projects/SMLj1ZZYJLe)**
+- 支持增删改待办事项（标题、完成状态）。
 
-## How It Works
+- 首页搜索功能
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+- 支持在首页搜索待办事项（可跨日期）。
+
+- 数据存储 使用 Supabase Database（PostgreSQL）。
+
+
+💻 技术栈
+
+前端：React + shadcnUI + TailwindCSS
+
+后端：Supabase（Auth + Database）
+
+部署：Vercel / Netlify
+
+🎯 界面交互
+
+登录后进入首页，显示 本月日历。
+
+点击日期 → 打开当天任务清单。
+
+任务清单支持 添加/完成/删除。
+
+首页右上角有搜索框，可以搜索所有待办事项。
